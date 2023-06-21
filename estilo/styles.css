@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+}
+*:before, *:after{
+    box-sizing: border-box;
+}
+/**Boot CSS**/
+html,
+body {
+    position: relative;
+    z-index: -1;
+    background: linear-gradient(to right,#084d6e,#000000);
+}
+html{
+    -webkit-font-smoothing: antialiased;
+}
+body{
+    overflow: hidden;
+}
+.center {
+    max-width: 1280px;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+.w50 {
+    padding: 0 10%;
+    width: 50%;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clear {
+    clear: both;
+}
+
+/**Estilização**/
+
+/*Header*/
+header{
+    height: 5em;
+    position: relative;
+    z-index: 2;
+}
+nav.desktop{
+    text-align: right;
+    width: 47rem;
+    margin-top: 1rem;
+    position: relative;
+    border-radius: 0.5rem;
+    font-size: 0;
+    box-shadow: 0 0.5rem 0.7rem 0 rgba(0,0,0,.1);
+    overflow: hidden;
+}
+nav.desktop a{
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    line-height: 3.5em;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: inline-block;
+}
+nav.desktop .animation{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    background: rgba(59,209,202,1);
+    border-radius: .5rem;
+    transition: all .5s ease 0s;
+}
+nav.desktop a:nth-child(1){
+    width: 100px;
+}
+nav.desktop a:nth-child(1):hover~.animation{
+    width: 100px;
+    left: 0;
+}
+nav.desktop a:nth-child(2){
+    width: 150px;
+}
+nav.desktop a:nth-child(2):hover~.animation{
+    width: 150px;
+    left: 100px;
+}
+nav.desktop a:nth-child(3){
+    width: 120px;
+}
+nav.desktop a:nth-child(3):hover~.animation{
+    width: 120px;
+    left: 250px;
+}
+nav.desktop a:nth-child(4){
+    width:150px;
+}
+nav.desktop a:nth-child(4):hover~.animation{
+    width:150px;
+    left: 370px;
+}
+nav.desktop a:nth-child(5){
+    width: 130px;
+}
+nav.desktop a:nth-child(5):hover~.animation{
+    width: 130px;
+    left: 520px;
+}
+nav.desktop a:nth-child(6){
+    width: 100px;
+}
+nav.desktop a:nth-child(6):hover~.animation{
+    width: 100px;
+    left: 650px;
+}
+nav.mobile{
+    display: none;
+}
+nav.social-media{
+    font-weight: 700;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    line-height: 2.5rem;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+nav.social-media img{
+    height: 5em;
+}
+
+/*Introdução*/
+
+#introduction .center{
+    height: 32em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#introduction .introduction-text h1{
+    font-size: 2.2em;
+    color: #ff8c00;
+}
+#introduction .introduction-text h2{
+    font-size: 1.5em;
+    color: #ccc;
+}
+
+/*Nossa História*/
+
+#ourhistory{
+    margin-top: 20px;
+    width: 100%;
+    height: 100vh;
+}
+#ourhistory .center{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+#ourhistory h1{
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    color: #ff8c00;
+    margin-bottom: 20px;
+}
+#ourhistory figure{
+    padding: 0;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#ourhistory figure img{
+    margin: 5px 0;
+    width: 300px;
+    border-radius: 20px;
+}
+#ourhistory figure img:nth-child(1){
+    margin-left: 250px;
+}
+#ourhistory figure img:nth-child(2){
+    margin-left: 80px;
+}
+#ourhistory article{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+#ourhistory article p{
+    width: 90%;
+    margin: 20px 0;
+    color: #ccc;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 975px) {
+    nav.desktop {
+        display: none;
+    }
+    nav.social-media{
+        display: none;
+    }
+    nav.mobile {
+        display: block;
+    }
+    .botao-menu-mobile {
+        width:2.5em;
+        height: 2.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        cursor: pointer;
+        color: rgba(59,209,202,1);
+    }
+    nav.mobile ul {
+        top: 5rem;
+        z-index: 3;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        display: none;
+        text-align: left;
+        background-color: #ccc;
+    }
+    nav.mobile li {
+        padding-left: 1em;
+        font-weight: 300;
+        width: 100%;
+        height: 3em;
+        display: block;
+        font-size: 1.2rem;
+        line-height: 3em;
+        transition: .3s;
+    }
+    nav.mobile li i{
+        margin: 0 1em;
+    }
+    nav.mobile li a {
+        display: block;
+        color: #222;
+        text-decoration: none;
+    }
+    nav.mobile li:hover {
+        background-color: rgba(59,209,202,1);
+        transition: .3s;
+    }
+    nav.mobile li a:hover{
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #fff;
+        width: 100%;
+        height: 100%;
+    }
+    nav.mobile ul #icon-mobile{
+        font-weight: 700;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        color: #fff;
+        text-decoration: none;
+        line-height: 2.5rem;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        display: flex;
+        justify-content:space-around;
+        align-items:center;
+        height: 5rem;
+        border-top: .5em solid #ff8c00;
+    }
+    nav.mobile ul #icon-mobile a{
+        text-decoration: none;
+    }
+    nav.mobile ul #icon-mobile a .fa-brands{
+        font-family: "FontAwesome";
+        font-style: normal;
+        font-size: 2em;
+        color: #222;
+        transition: .3s;
+    }
+    nav.mobile ul #icon-mobile a .fa-brands:hover{
+        color: rgba(59,209,202,1);
+        transition: .3s;
+    }
+    nav.mobile ul #icon-mobile a .fa-solid{
+        font-family: "FontAwesome";
+        font-style: normal;
+        font-size: 2em;
+        color: #222;
+        transition: .3s;
+    }
+    nav.mobile ul #icon-mobile a .fa-solid:hover{
+        color: rgba(59,209,202,1);
+        transition: .3s;
+    }
+}
+

@@ -1,11 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <title>Blog Pet Shop - Casa do Produtor</title>
+    <link rel="stylesheet" href="estilo/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link href="estilo/styles.css" rel="stylesheet" />
+    <meta http-equiv="pragma" content="no-cache" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Casa do Produtor</title>
+    <meta name="author" content="Ariel Lopes">
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+        .start-home {
+            width: 100px;
+            left: 0;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Olá mundo</h1>
+    <header>
+        <div class="center">
+            <nav class="social-media left">
+                <img src="imagens/logo.png" alt="">
+            </nav><!--social media-->
+            <nav class="desktop right">
+                <a href="index.html">Home</a>
+                <a href="#ourhistory">Nossa História</a>
+                <a href="#portfolio">Portfólio</a>
+                <a href="#comunication">Comunicação</a>
+                <a href="#talktous">Fale Conosco</a>
+                <a href="#news">Notícia</a>
+                <div class="animation start-home"></div>
+            </nav><!--desktop-->
+            <nav class="mobile left">
+                <div class="botao-menu-mobile">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+                <!--botao-menu-mobile-->
+                <ul>
+                    <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                    <li><a href="#ourhistory"><i class="fa fa-home" aria-hidden="true"></i> Nossa História</a></li>
+                    <li><a href="#portfolio"><i class="fa fa-user-circle" aria-hidden="true"></i> Portfolio</a></li>
+                    <li><a href="#comunication"><i class="fa fa-th" aria-hidden="true"></i> Comunicação Empresarial</a>
+                    </li>
+                    <li><a href="#talktous"><i class="fa fa-tasks" aria-hidden="true"></i> Fale Conosco</a></li>
+                    <li><a href="#news"><i class="fa fa-envelope-o" aria-hidden="true"></i> Notícia</a></li>
+                </ul>
+            </nav>
+            <!--mobile-right-->
+            <div class="clear"></div>
+        </div>
+        <!--center-->
+    </header>
+    <section id="introduction">
+        <div class="center">
+            <div class="introduction-text">
+                <h1>Bem vindo,</h1>
+                <h2>Esse é o Blog Coorporativo do Pet - Shop Casa do Produtor!</h2>
+            </div>
+            <!--profile-text-->
+        </div>
+    </section>
+    <!--introduction-->
+    <section id="ourhistory">
+        <div class="center">
+            <h1>Nossa História</h1>
+            <figure class="left w50">
+                <img class="right" src="imagens/ourhistory1.jpeg" alt="">
+                <img class="left" src="imagens/ourhistory2.jpg" alt="">
+            </figure>
+            <article class="right w50">
+                <p>&nbsp;&nbsp;&nbsp;Fundada por Adriano Melo em 1995 o Pet Shop – Casa do Produtor, começou como uma portinha no meio de
+                    uma quadra na Rua Engenheiro Rebouças no bairro Rebouças, Curitiba-PR, contava apenas com o próprio
+                    senhor Adriano que atua até hoje na empresa e seus familiares, sendo que hoje em dia conta com mais
+                    de 300 funcionários.</p>
+                <p>&nbsp;&nbsp;&nbsp;A empresa começou pequena, porém hoje já existem 3 lojas contando com a loja do Rebouças que é muito
+                    bem estruturada, com loja e grandes estoques, a segunda loja foi fundada no bairro Seminário, logo
+                    após o Centro de Distribuição no bairro Rebouças e por último a inauguração da loja do bairro São
+                    Braz em agosto de 2020.</p>
+                <p>&nbsp;&nbsp;&nbsp;Tendo ética, transparência, responsabilidade e respeito a todos como valores o Pet Shop – Casa do
+                    Produtor tem como missão proporcionar aos clientes, que são apaixonados por animais, atendimento de
+                    qualidade, conforto, praticidade e economia, visando assim atender cada vez mais clientes, com novos
+                    produtos e inovações do mercado.</p>
+            </article>
+            <div class="clear"></div>
+        </div>
+    </section><!--ourhistory-->
+
+
+    <script src="JS/smooth-scroll.js"></script>
+    <script src="JS/jquery.js"></script>
+    <script src="JS/scripts.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
