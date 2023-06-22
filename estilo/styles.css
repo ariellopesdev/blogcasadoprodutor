@@ -20,13 +20,7 @@ html{
 body{
     overflow: hidden;
 }
-.center {
-    max-width: 1280px;
-    padding: 0 2%;
-    margin: 0 auto;
-}
 .w50 {
-    padding: 0 10%;
     width: 50%;
 }
 .left {
@@ -42,6 +36,7 @@ body{
 /**Estilização**/
 
 .title{
+    padding-top: 20px;
     width: 100%;
     text-align: center;
     font-size: 2em;
@@ -151,117 +146,264 @@ nav.social-media img{
 
 /*Introdução*/
 
-#introduction .center{
-    height: 32em;
+#introduction {
+    position: relative;
+    width: 100%;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#introduction .introduction-text h1{
-    font-size: 2.2em;
-    color: #ff8c00;
+#introduction-text{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
 }
-#introduction .introduction-text h2{
-    font-size: 1.5em;
+#introduction-text h1{
+    color: #ff8c00;
+    font-size: 30px;
+}
+#introduction-text h2{
     color: #ccc;
+    font-size: 20px;
 }
 
 /*Nossa História*/
 
-#ourhistory, #portfolio, #comunication{
+#ourhistory{
+    width: 100%;
     margin-top: 20px;
-    width: 100%;
-    height: 100vh;
-}
-#ourhistory .center{
-    width: 100%;
-    height: 100%;
-    padding: 0;
 }
 #ourhistory figure{
-    padding: 0;
-    height: 500px;
+    height: 600px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 #ourhistory figure img{
-    margin: 5px 0;
     width: 300px;
-    border-radius: 20px;
+    border-radius: 10%;
+    margin: 10px 0;
 }
-#ourhistory figure img:nth-child(1){
-    margin-left: 35%;
+#ourhistory article{
+    height: 600px;
+    padding: 15px 15px;
+    display: flex;
+    justify-content: justify;
+    align-items: center;
 }
-#ourhistory figure img:nth-child(2){
-    margin-left: 20%;
+#ourhistory article p{
+    padding-right: 100px;
+    color: #ccc;
+    text-align: justify;
 }
-#ourhistory article, #portfolio article, #comunication article{
-    padding: 0;
+
+/*Portfólio*/
+
+#portfolio{
+    width: 100%;
+    margin-top: 20px;
+}
+#portfolio figure{
+    padding: 15px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#portfolio figure.w50{
+    width: 60%;
+}
+#portfolio figure img{
+    width: 120px;
+    height: 200px;
+    border-radius: 5px;
+    margin:10px;
+}
+#portfolio figure img:hover{
+    border: 1px solid #ff8c00;
+}
+#portfolio article{
+    height: 600px;
+    padding: 15px 15px;
+    display: flex;
+    justify-content: justify;
+    align-items: center;
+}
+#portfolio article.w50{
+    width: 40%;
+}
+#portfolio article p{
+    padding-left: 100px;
+    color: #ccc;
+    text-align: justify;
+}
+
+/*Comunicação*/
+
+#comunication{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+#comunication figure{
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 15px;
+}
+#comunication figure img{
+    width: 400px;
+    margin: 10px 0;
+}
+#comunication article{
+    height: 1000px;
+    padding: 15px 15px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+#comunication article p{
+    text-align: justify;
+    width: 300px;
+    margin-left: 25px;
+    color: #ccc;
+}
+
+/*Fale Conosco*/
+
+#talktous{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 500px;
 }
-#ourhistory article p, #portfolio article p, #comunication article p{
-    width: 90%;
-    margin: 20px 0;
-    color: #ccc;
-    font-size: 16px;
+#talktous #cardtalk{
+    max-width: 700px;
+    height: 100%;
+    background-color: #d1d1d1;
+    margin-bottom: 20px;
+}
+#cardfisicas{
+    padding: 10px;
+    border-right: 2px solid rgba(59,209,202,1);
+}
+#cardfisicas h2{
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+#cardfisicas p{
+    color: #696969;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+#cardfisicas h3{
+    margin-bottom: 5px;
+    color: #343434;
+    font-size: 15px;
+}
+#cardfonesite{
+    padding: 10px;
+}
+#cardfonesite h2{
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+#cardfonesite p{
+    color: #696969;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+#cardfonesite a{
+    color: #ff8c00;
+    font-size: 13px;
 }
 
-/*Portfolio*/
+/*Notícia*/
 
-#portfolio .center{
+#news{
     width: 100%;
     height: 100%;
-    padding: 0;
-}
-#portfolio figure{
-    padding: 10px 0 0 80px;
-    height: 500px;
-    flex-wrap: nowrap;
-    justify-content: center;
-}
-#portfolio figure img{
-    margin: 5px 5px;
-    width: 150px;
-    border-radius: 20px;
-}
-
-/*Comunicação Empresarial*/
-
-#comunication .center{
-    width: 100%;
-    height: 100%;
-    padding: 0;
-}
-
-#comunication figure{
-    padding: 0;
-    height: 500px;
+    margin-top: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+#news #cardnews{
+    max-width: 600px;
+    height: 100%;
+    background-color: #ff8c00;
+    border: 1px solid #ccc;
+}
+#news figure{
+    width: 100%;
+}
+#news figure img{
+    width: 100%;
+}
+article.left{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#cardnews article h1{
+    margin: 8px 0;
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+}
+#cardnews article p{
+    text-align: justify;
+    width: 100%;
+    padding: 0 5%;
+    margin-bottom: 10px;
+}
+#cardnews article a{
+    text-align: center;
+    margin: 0 5%;
+    background-color: rgba(59,209,202,1);
+    width: 150px;
+    color: #000000;
+    height: 30px;
+    line-height: 30px;
+    transition: 1s;
+    border-radius: 15px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+#cardnews article a:hover{
+    background-color: #084d6e;
+    color: #ccc;
+    transition: 1s;
+}
 
-#comunication figure img{
-    width: 450px;
-    border-radius: 20px;
+/*Footer*/
+
+footer{
+    width: 100%;
 }
-@media screen and (max-width: 1280px){
-    .title{
-        margin-top: 50px;
-    }
+footer p{
+    color: #ccc;
+    font-size: 12px;
+    text-align: center;
 }
-@media screen and (max-width: 1120px){
-    #ourhistory figure, #portfolio figure, #comunication figure{
-        width: 100%;
+
+@media screen and (max-width: 1235px) {
+    #portfolio figure{
+        height: 700px;
     }
-    #ourhistory article, #portfolio article, #comunication article{
-        width: 100%;
-        margin-bottom: 40px;
+    #portfolio article{
+        height: 700px;
     }
 }
 @media screen and (max-width: 975px) {
@@ -364,18 +506,68 @@ nav.social-media img{
         color: rgba(59,209,202,1);
         transition: .3s;
     }
-}
-@media screen and (max-width: 650px) {
+    #introduction{
+        height: 90vh;
+    }
+    #ourhistory figure{
+        width: 100%;
+        height: 450px;
+    }
     #ourhistory article{
-        height: 600px;
+        width: 100%;
     }
-    #portfolio figure{
-        height: 750px;
+    #ourhistory article p{
+        padding-right: 0;
     }
-    #ourhistory figure img:nth-child(1){
-        margin-left: 25%;
+    #portfolio figure.w50{
+        width: 100%;
+        height: 100%;
     }
-    #ourhistory figure img:nth-child(2){
-        margin-left: 10%;
+    #portfolio article.w50{
+        width: 100%;
+        height: 100%;
+    }
+    #portfolio article p{
+        padding-left: 0;
+    }
+    #comunication figure{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        padding-right: 0;
+    }
+    #comunication article{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+    #comunication article p{
+        width: 90%;
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 720px) {
+    #cardfisicas, #cardfonesite{
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #cardfisicas p, #cardfonesite p{
+        text-align: center;
+    }
+    #cardfisicas{
+        border-right: none;
+        border-bottom: 1px solid rgba(59,209,202,1);
+    }
+}
+@media screen and (max-width: 400px) {
+    #ourhistory article{
+        height: 800px;
+    }
+    #comunication figure img{
+        width: 300px;
     }
 }
